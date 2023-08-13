@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Two-Line Eval Bar for Chess.com",
-    "description": "An eval bar that shows the difference between playing the best and second-best move on any given move. Perfect for intense only-move sequences, especially for pro tournaments!",
+    "description": "This eval bar shows the difference between the best & second-best line on any move. Perfect for following intense, high-level games!",
     "version": "0.1.0", 
     "icons": {
         "16": "icon16.png",
