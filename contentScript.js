@@ -33,12 +33,7 @@ function evalInjection() {
         console.log("Height1 (wB2, bB2): "+height1);
         console.log("Height2 (wB1): "+height2);
     }
-    /*whiteBar.style.cssText = `background-color: rgb(205, 205, 205); transform: translate3d(0px, ${height}%, 0px);`;
-    white2ndBar.style.cssText = `background-color: rgb(250,250,250); transform: translate3d(0px, ${height2 *(2/3)}%, 0px);`;
-    black2ndBar.style.cssText = `background-color: rgb(80,80,80); transform: translate3d(0px, ${height2*(1/3)}%, 0px);`;
-    console.log("Draw bar height %age: "+height2*(1/3));
-    console.log("Black bar height %age: "+height2*(2/3));*/
-
+    
     /* Bar behavior: 
     
     - white bar overwrites all others
