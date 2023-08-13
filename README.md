@@ -1,1 +1,1 @@
-# BEB: A (B)etter (E)val (B)ar
+# TEB: the (T)wo-Line (E)val (B)ar for Chess.com
