@@ -1,6 +1,9 @@
 //alert("contentScript entrance");
 
-setTimeout(evalInjection,  5000);  
+setTimeout(function(){
+    evalInjection();
+    setInterval(evalInjection,200);
+}, 1000)
 
 let showBarFor = "";
 
@@ -23,17 +26,17 @@ function evalInjection() {
         white2ndBar.style.cssText = `background-color: rgb(250,250,250);transform: translate3d(0px, ${height1}%, 0px);`;
         black2ndBar.style.cssText = `background-color: rgb(80,80,80);transform: translate3d(0px, ${height2}%, 0px);`;
         console.log("BLACK TO MOVE")
-        console.log("Height1 (wB1, wB2): "+height1);
+        console.log("Height1 (wB2): "+height1);
         console.log("Height2 (bB2): "+height2);
     } else {
         black2ndBar.style.cssText = `background-color: rgb(80,80,80);transform: translate3d(0px, ${100}%, 0px);`;
         white2ndBar.style.cssText = `background-color: rgb(250,250,250); transform: translate3d(0px, ${height1}%, 0px);`;
         whiteBar.style.cssText = `background-color: rgb(205,205,205) !important; transform: translate3d(0px, ${height2}%, 0px);`;
         console.log("WHITE TO MOVE")
-        console.log("Height1 (wB2, bB2): "+height1);
+        console.log("Height1 (wB2): "+height1);
         console.log("Height2 (wB1): "+height2);
     }
-    
+
     /* Bar behavior: 
     
     - white bar overwrites all others

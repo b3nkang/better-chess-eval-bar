@@ -2,12 +2,13 @@
     "manifest_version": 3,
     "name": "BEB - A Better Eval Bar for Chess.com",
     "description": "An eval bar with a 2nd bar for each side, displaying the evaluation dropoff for the second-best move.",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "content_scripts": [
         {
             "js": ["contentScript.js"],
             "matches": [
-                "https://www.chess.com/events/2023-fide-chess-world-cup/05-01/Grandelius_Nils-Erigaisi_Arjun",
+                "https://www.chess.com/events/*",
+                "https://www.chess.com/game/live/*",
                 "https://www.chess.com/*"
             ]
         }
