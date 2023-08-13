@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "BEB - A Better Eval Bar for Chess.com",
     "description": "An eval bar with a grey bar, displaying the evaluation dropoff for the second-best move.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "content_scripts": [
         {
             "js": ["contentScript.js"],
