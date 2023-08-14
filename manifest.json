@@ -9,7 +9,7 @@
         "48": "icon48.png",
         "128": "icon128.png"
     },
-    "permissions": ["activeTab", "storage", "tabs"],
+    "permissions": ["storage"],
     "action": {
       "default_popup": "popup.html"
     },  
