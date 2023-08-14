@@ -1,26 +1,22 @@
-/*setTimeout(function(){
-    evalInjection();
-    setInterval(evalInjection,200);
-}, 1000)*/
 
 let showBarFor = "";
-let interval;
+let interval; 
 
 chrome.runtime.onMessage.addListener(function(message) {
-    if (message.isEnabled) {
-      interval = setInterval(function() {
-        evalInjection();
-      }, 200);
+  if (message.isEnabled) {
+    interval = setInterval(function() {
       evalInjection();
-    } else {
-      clearInterval(interval);
-      let barClear1 = document.querySelector('.evaluation-bar-black')
-      barClear1.style.cssText = `transform: translate3d(0px, ${100}%, 0px);`;
-      let barClear2 = document.querySelector('.evaluation-bar-draw');
-      barClear2.style.cssText = `transform: translate3d(0px, ${100}%, 0px);`;
-    }
-  });  
-  
+    }, 200);
+    evalInjection(); 
+  } else {
+    clearInterval(interval);
+    let barClear1 = document.querySelector('.evaluation-bar-black')
+    barClear1.style.cssText = `transform: translate3d(0px, ${100}%, 0px);`;
+    let barClear2 = document.querySelector('.evaluation-bar-draw');
+    barClear2.style.cssText = `transform: translate3d(0px, ${100}%, 0px);`;
+  }
+});
+
 
 function evalInjection() {
     const whiteBar = document.querySelector('.evaluation-bar-white'); 
@@ -29,7 +25,7 @@ function evalInjection() {
     let eval1 = get1stLine();
     let height1 = getEvalHeight(eval1);
     let eval2 = get2ndLine();
-    height2 = getEvalHeight(eval2);
+    let height2 = getEvalHeight(eval2);
 
     if (showBarFor == "black") {
         whiteBar.style.cssText = `background-color: rgb(250,250,250);transform: translate3d(0px, ${height1}%, 0px);`;
@@ -108,4 +104,3 @@ function checkPeriods(str) {
       return "unknown";
     }
   }
-  
